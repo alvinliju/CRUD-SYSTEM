@@ -3,6 +3,7 @@ const app = express()
 const path = require('path');
 const mongoose = require("mongoose");
 const customerRoute=require('./routes/customer.route')
+var hbs=require('express-handlebars');
 const Customer = require('./models/customer.models')
 const { getCustomer,
     createCustomer,
@@ -15,8 +16,11 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.set('view engine', 'hbs');
 app.engine('hbs', handlebars({
-    layoutsDir: __dirname + '/views/layouts',extname: 'hbs' }));
-
+    layoutsDir: __dirname + '/views/layouts',
+    extname: 'hbs',
+    defaultLayout: 'layout',
+    }));
+    
 // routes
 app.get('/',(req,res)=>{
     res.send('The server is up and running');

@@ -1,6 +1,7 @@
 const Customer=require('../models/customer.models')
 const path = require('path');
 
+
 const getCustomer = (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'frontend', 'customer.html'));
 };
