@@ -14,7 +14,8 @@ const { getCustomer,
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.set('view engine', 'hbs');
-
+app.engine('hbs', handlebars({
+    layoutsDir: __dirname + '/views/layouts',extname: 'hbs' }));
 
 // routes
 app.get('/',(req,res)=>{
