@@ -11,12 +11,13 @@ const { getCustomer,
 
 
 //middlewares
+app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 
 // routes
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+app.get('/',()=>{
+    res.sendFile(path.join(__dirname, '..', 'frontend', 'customer.html'));
+})
 
 <<<<<<< HEAD
 app.use(express.static(path.join(__dirname, "../frontend/")));
