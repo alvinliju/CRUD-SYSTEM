@@ -1,0 +1,85 @@
+/* Styling for the navigation bar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav h2 {
+    margin: 0;
+    display: inline;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 10px;
+    align-items: end;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the main content */
+.content {
+    padding: 20px;
+}
+
+.order-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Styling for the review section */
+.review-section {
+    margin-top: 20px;
+}
+
+.review-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-section input[type="number"] {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.review-section textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for the footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

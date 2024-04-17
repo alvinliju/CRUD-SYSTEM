@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Customer page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <form action="/customer/custom/" method="get">
-        <label for="team_name">Enter name: </label>
-        <input
-          id="team_name"
-          type="text"
-          name="fname"
-          value="your first name" />
-        <input type="submit" value="OK" />
-      </form>
-</body>
+    <link rel="stylesheet" href="../frontend/customer.css"/>
+  </head>
+  
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h2>Restaurant Name</h2>
+        <a href="#">Home</a>
+        <a href="#">Help Desk</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h3>Food Orders</h3>
+        <ul class="order-list">
+            <!-- Example food orders -->
+            <li>Order 1: Spaghetti Bolognese</li>
+            <li>Order 2: Grilled Chicken Salad</li>
+            <li>Order 3: Margherita Pizza</li>
+        </ul>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <h3>Leave a Review</h3>
+            <form id="reviewForm">
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+
+            <!-- Display submitted reviews -->
+            <div id="reviews">
+                <h4>Submitted Reviews:</h4>
+                <ul id="reviewList">
+                    <!-- Reviews will be appended here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    </footer>
 </html>
