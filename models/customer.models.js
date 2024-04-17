@@ -13,6 +13,10 @@ const CustomerSchema = mongoose.Schema(
         items:{
             type:String,
             required:true
+        },
+        price:{
+            type:Number,
+            required:true
         }
     },
     {
