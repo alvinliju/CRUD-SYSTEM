@@ -12,7 +12,6 @@ app.get('/', (req, res) => {
 
 app.get('/customer',(req, res)=>{
     res.sendFile(path.join(__dirname+'/frontend/customer.html'));
-<<<<<<< HEAD
 });
 
 app.post('/customer/custom',(req,res)=>{
@@ -20,9 +19,6 @@ app.post('/customer/custom',(req,res)=>{
     const name = req.body.fname;
     console.log(`Submitted Name: ${name}`);
 });
-=======
-})
->>>>>>> refs/remotes/origin/main
 
 app.post('/customer', async(req,res)=>{
     try {
@@ -33,11 +29,6 @@ app.post('/customer', async(req,res)=>{
       }
 })
 
-<<<<<<< HEAD
-app.listen(3000, () => {
-  console.log(`Example app listening`)
-});
-=======
 app.get('/customer/:tableNumber',async (req,res)=>{
     try{
         const {tableNumber} = req.params;
@@ -62,4 +53,3 @@ mongoose.connect("mongodb+srv://admin:parayulla@cluster0.ymgspgk.mongodb.net/foo
   .catch(() => {
     console.log("connection failed");
   });
->>>>>>> refs/remotes/origin/main
