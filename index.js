@@ -15,15 +15,15 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 
 // routes
-app.get('/',()=>{
-    res.sendFile(path.join(__dirname, '..', 'frontend', 'customer.html'));
+app.get('/',(req,res)=>{
+    res.send('The server is up and running');
 })
 
 app.use('/customer',customerRoute);
 
 app.post('/customer', createCustomer);
 
-app.get('/customer/:tableNumber', getCustomer)
+app.get('/customer/:tableNumber', getCustomer);
 
 
 
