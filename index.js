@@ -13,6 +13,8 @@ const { getCustomer,
 //middlewares
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
+app.set('view engine', 'hbs');
+
 
 // routes
 app.get('/',(req,res)=>{
