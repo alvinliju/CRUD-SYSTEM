@@ -19,36 +19,12 @@ app.get('/',(req,res)=>{
     res.send('The server is up and running');
 })
 
-<<<<<<< HEAD
-app.use(express.static(path.join(__dirname, "../frontend/")));
-
-app.get('/customer',(req, res)=>{
-    res.sendFile(path.join(__dirname+'/frontend/customer.html'));
-})
-=======
 app.use('/customer',customerRoute);
 
 app.post('/customer', createCustomer);
->>>>>>> refs/remotes/origin/main
 
 app.get('/customer/:tableNumber', getCustomer);
 
-<<<<<<< HEAD
-app.get('/customer/:tableNumber',async (req,res)=>{
-    try{
-        const {tableNumber} = req.params;
-        const customer = await Customer.findOne({ table: tableNumber });
-        console.log('kutti mama kitii')
-        if(!customer){
-            return res.status(404).json({ message: "Customer not found" });
-        }
-        res.status(200).json(customer);
-    } catch(error){
-        res.status(500).json({ message: error.message });
-    }
-})
-=======
->>>>>>> refs/remotes/origin/main
 
 
 //db connection
