@@ -1,0 +1,19 @@
+<section>
+    <div class="container mt-4 ml-2 mr-2">
+        <div class="row">
+            {{#each orderss}}
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.price}}</p>
+                        <a href="#" class="btn btn-primary">ordered</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

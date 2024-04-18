@@ -24,7 +24,7 @@ const homeRoute = (req,res)=>{
         price:"199"
         }
     ]
-    res.render('index.hbs', { orderss});
+    res.render('layout.hbs', { orderss});
 }
 
 const getCustomer = (req, res) => {
