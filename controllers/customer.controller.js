@@ -1,7 +1,9 @@
 const Customer=require('../models/customer.models')
 const path = require('path');
 
-
+const homeRoute = (req,res)=>{
+    res.render('index.hbs', { title: 'Express' });
+}
 const getCustomer = (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'frontend', 'customer.html'));
 };
@@ -32,5 +34,6 @@ const findCustomer = async (req, res) => {
 module.exports = {
     getCustomer,
     createCustomer,
-    findCustomer
+    findCustomer,
+    homeRoute
 }
