@@ -2,8 +2,31 @@ const Customer=require('../models/customer.models')
 const path = require('path');
 
 const homeRoute = (req,res)=>{
-    res.render('index.hbs', { title: 'Express' });
+    let orderss=[
+        {
+        name:"biriyani",
+        quantity:"2",
+        price:"199"
+        },
+        {
+        name:"biriyani",
+        quantity:"2",
+        price:"199"
+        },
+        {
+        name:"biriyani",
+        quantity:"2",
+        price:"199"
+        },
+        {
+        name:"biriyani",
+        quantity:"2",
+        price:"199"
+        }
+    ]
+    res.render('index.hbs', { orderss});
 }
+
 const getCustomer = (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'frontend', 'customer.html'));
 };

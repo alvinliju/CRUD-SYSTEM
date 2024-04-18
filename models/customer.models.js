@@ -10,7 +10,7 @@ const CustomerSchema = mongoose.Schema(
             type:Number,
             required:true
         },
-        items:{
+        orders:{
             type:String,
             required:true
         },

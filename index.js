@@ -32,7 +32,7 @@ app.engine('hbs', hbs.engine({
 
 
 
-// routes
+// ROUTES
 app.use('/', homeRoute);
 
 app.use('/customer',customerRoute);
